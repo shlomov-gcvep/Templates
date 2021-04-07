@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates>
+  <Template DisplayName="Sps_WGS" Description="src file for working in submitter">
+    <File Name="$Name$" Extension=".sub"><![CDATA[&ACCESS  RVO
+&COMMENT hotfix 0 WGS PLC program "$Name$"
+DEF $Name$ ( )
+	;version of the hotfix 0
+	;FOLD TITLE
+	;***************************************************
+	;*               Welding Group Samara              *
+	;*                 www.wgs.gcvep.ru                *
+	;*        Dzerjinskogo str., 46D, Samara region,   *
+	;*   Samara, Russian Federation, zip cod 443070    *
+	;*      +7(846)267-31-54, 279-32-03, 267-31-53     *
+	;*                   wgs@gcvep.ru                  *
+	;*=================================================*
+	;*   Robottyp      : ___________                   *
+	;*   SN Robot      : ___________                   *
+	;*   SN Steuerung  : ___________                   *
+	;*   Version       : 0.0                           *
+	;*   Сlient        : OOO"______"                   *
+	;*   Сreator       : ___________________           *
+	;*   Date          : xx.xx.202x                    *
+	;*   Born in Samara                                *
+	;***************************************************
+	;ENDFOLD (TITLE)
+	;FOLD DECLARATIONS
+		
+	;ENDFOLD (DECLARATIONS)
+	;FOLD INI
+		
+	;ENDFOLD (INI)
+	
+	LOOP
+		
+	ENDLOOP
+	
+END
+]]></File>
+  </Template>
+</Templates>

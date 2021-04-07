@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates>
+  <Template DisplayName="Signal_list">
+    <File Name="$Name$" Extension=".dat"><![CDATA[&ACCESS RVO
+&REL 1
+&COMMENT hotfix 0 The math function "Signal_list"
+&PARAM EDITMASK = *
+&PARAM TEMPLATE = \WorkVisual 5.0\TemplatesDEFDAT $Name$
+
+;**********************************
+;         ___                     *
+;      ,~|OO_|~,                  *
+;     O=|==OF   ',                *
+;    /    //      ;               *
+;   *    //_      ;   _____       *
+;       (___)     ;  /     |      *
+;       /___\      '~|_____|      *
+;                                 *
+;FOLD The name of the identifier           *
+;**********************************
+;			2021.03.31 fuzzy_l
+;Welding Group Samara
+;www.wgs.gcvep.ru
+;Dzerjinskogo str., 46D, Samara region, 
+;Samara, Russian Federation, zip cod 443070
+;+7(846)267-31-54, 279-32-03, 267-31-53 
+;wgs@gcvep.ru
+;=====================================
+;The maximum number of visible rows in the function 
+;is 38. This will allow you to see it on your SmartPad.
+
+;Contents of folders in the project
+;	KRC\R1\Program\Motion — Movements to perform the main tasks of the complex
+;	KRC\R1\Program\Servis — Auxiliary movements that do not participate in the cycle for testing and diagnostics (touch-up of the approach to the point of checking the tool calibration, tool recalculation, etc.)
+;	KRC\R1\Program\Test — Test programs and other garbage that is not a pity to remove
+;	KRC\R1\Program\LogicMath – logic and mathematics
+;	KRC\R1\Program\HMI_PLC – functions related to both visualization and data transmission to the PLC.
+;	KRC\R1\Program\Global – contains dat files of global variables, signals, etc.
+
+;Global subroutines are called with a capital letter, local subroutines with a small one
+
+;The entry point to the main program is located in the file Main. SRC (Call. src)
+
+;Global variables are described in the folder KRC\R1\Program\Global
+;* INPUTS_NAMEPRJ. dat List of global input signal declarations
+;* OUTPUTS_NAMEPRJ. dat List of global output signal declarations
+;* VARIABLE_NAMEPRJ. dat List of global variable declarations related to the program settings (enabling / disabling a particular function, the number of attempts to perform an action)
+;* VEL_ACC_NAMEPRJ. dat Speed and acceleration — if there is a need to store them in a single file	
+
+;The procedures used in interrupts are " ir_"
+;Movement programs - " mv_"
+;Welding programs - " wp_"
+;Programs for the submitter - " sub_"
+;Programs for displaying information on the smartpad - " hmi_"
+;Programs for working with Ethernet KRL - " eki_"
+
+;Global variables - " g_"
+;Variable DatFail - " d_"
+;Local variables do not have a prefix
+;CONST - " con_"
+
+;Data type	|	local		|	data fail	|	global или в $config.dat|	touch up
+;-----------+-----------+--------------+--------------------------+-------------
+;BOOL			|	b_/tb_	|	db_			|	gb_							|
+;INT			|	n_/tn_	|	dn_			|	gn_							|
+;REAL			|	r_/tr_	|	dr_			|	gr_							|
+;ENUM enumerat|			|	eN_			|	geN_							|	
+;Variable ENUM|	e_/te_|	de_			|	ge_							|
+;CHAR			|	c_/tc_	|	dc_			|	gc_							|
+;-----------+-----------+--------------+--------------------------+--------------
+;STRUCT		|	s			|	ds				|	gs								|
+;DATE			|date_/tdate_|	ddata_		|	gdata_						|
+;VECTOR		|	v_/tv_	|	dv_			|	gv_							|
+;FRAME		|	f_/tf_	|	df_			|	gf_							|
+;POS			|	p_/tp_	|	dp_			|	gp_							|Xp_, Xdp_, Xgp_
+;E6POS		|e6p_/te6p_	|	de6p_			|	ge6p_							|Xe6p_, Xde6p_, Xge6p_
+;AXIS			|	a_/ta_	|	da_			|	ga_							|Xa_, Xda_, Xga_
+;E6AXIS		|e6a_/te6a_	|	de6a_			|	ge6a_							|Xe6a_, Xde6a_, Xge6a_
+;-----------+-----------+--------------+--------------------------+--------------
+;For BAS( , )|
+;FDAT			|	fe6p_		|	Fe6p_			|	Fe6p_							|Fe6p_
+;PDAT(PTP)	|	pe6p_		|	dPe6p_		|	gPe6p_						|Pe6p_
+;				|	pe6a_		|	dPe6a_		|	gPe6a_						|Pe6a_
+;PDAT(LIN,CIRC)|le6p_	|	dLe6p_		|	gLe6p_						|Le6p_
+
+;Variables used as an index of inputs/outputs/timers/flags
+;IN - nDi
+;OUT - nDo
+;ANIN - nAi
+;ANOUT - nAo
+;FLAG - nF
+;CYCFLAG - nCf
+;TIMER - until
+;TIMERFLAG - nTf
+
+;Signal designation
+;SIGNAL - sig + (Di,Do,Ai,Ao)
+;IN - sigDi
+;OUT - sigDo
+;ANIN - sigAi
+;ANOUT - sigAo
+;IN from PLC (if bridge) - sigPLCi
+;OUT ot PLC (if bridge) - sigPL
+
+;Variables used as an index
+;BASE_DATA - [nBase...]
+;TOOL_DATA - [nTool...]
+
+;INTEG = 90 		;Decimal system
+;INTEG = ’B1011010’;Binary system
+;INTEG = ’H5A’	;Hexadecimal system
+
+;Program design stages:
+;		Pre Alpha				(pa)
+;		Alpha						(a)
+;		Beta						(b)
+;		Release Condidate		(rc)
+;		Release					(r)
+;		- Support				(s)
+;		Post-RTM					(pr)
+
+;ENDFOLD
+;**********************************
+ENDDAT
+]]></File>
+  </Template>
+</Templates>

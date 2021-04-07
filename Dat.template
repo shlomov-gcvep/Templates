@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates>
+  <Template DisplayName="Dat" Description="Clean dat file">
+    <File Name="$Name$" Extension=".dat"><![CDATA[&ACCESS RVO
+&REL 3
+&PARAM EDITMASK = *
+&COMMENT hotfix 0
+&PARAM TEMPLATE = C:\KRC\Roboter\Template\vorgabe
+DEFDAT $Name$
+;version of the hotfix 0
+
+ENDDAT
+]]></File>
+  </Template>
+</Templates>

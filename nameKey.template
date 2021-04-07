@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates>
+   <Template DisplayName="mv_nameKey_mov" Description="Module to describe the movements of the robot" Icon="src" >
+    <File Name="$Name$" Extension=".dat"><![CDATA[&ACCESS RV
+&REL 1
+&COMMENT hotfix 0 The movement function
+&PARAM EDITMASK = *
+&PARAM TEMPLATE = \WorkVisual 5.0\Templates
+DEFDAT $Name$
+;version of the hotfix 0
+;FOLD EXTERNAL DECLARATIONS;%{PE}%MKUKATPBASIS,%CEXT,%VCOMMON,%P
+;FOLD BASISTECH EXT;%{PE}%MKUKATPBASIS,%CEXT,%VEXT,%P
+EXT  BAS (BAS_COMMAND  :IN,REAL  :IN )
+;ENDFOLD (BASISTECH EXT)
+;FOLD USER EXT;%{E}%MKUKATPUSER,%CEXT,%VEXT,%P
+
+
+;ENDFOLD (USER EXT)
+;ENDFOLD (EXTERNAL DECLARATIONS)
+;USER variable
+
+
+;ROBOT variable
+
+ENDDAT
+]]></File>
+    <File Name="$Name$" Extension=".src"><![CDATA[&ACCESS RV
+&REL 1
+&COMMENT (pa) hotfix 0 The movement function
+&PARAM EDITMASK = *
+&PARAM TEMPLATE = \WorkVisual 5.0\Templates
+DEF  $Name$ ( )
+;(pa) version of the hotfix 0
+	;FOLD INI;%{PE}
+		;FOLD TITLE
+			;***************************************************
+			;*               Welding Group Samara              *
+			;*                 www.wgs.gcvep.ru                *
+			;*        Dzerjinskogo str., 46D, Samara region,   *
+			;*   Samara, Russian Federation, zip cod 443070    *
+			;*      +7(846)267-31-54, 279-32-03, 267-31-53     *
+			;*                   wgs@gcvep.ru                  *
+			;*=================================================*
+			;*   Robottyp      : ___________                   *
+			;*   SN Robot      : ___________                   *
+			;*   SN Steuerung  : ___________                   *
+			;*   Version       : 0.0                           *
+			;*   Сlient        : OOO"______"                   *
+			;*   Сreator       : ___________________           *
+			;*   Date          : xx.xx.202x                    *
+			;*   Born in Samara                                *
+			;***************************************************
+		;ENDFOLD (TITLE)
+		;FOLD VARIABLES
+			
+		;ENDFOLD (VARIABLES)
+		;FOLD BASISTECH INI
+			GLOBAL INTERRUPT DECL 3 WHEN $STOPMESS==TRUE DO IR_STOPM ( )
+			INTERRUPT ON 3 
+			BAS (#INITMOV,0 )
+		;ENDFOLD (BASISTECH INI)
+		;FOLD USER INI
+			
+		;ENDFOLD (USER INI)
+	;ENDFOLD (INI)
+	
+	;FOLD PTP HOME  Vel= 100 % DEFAULT;%{PE}%MKUKATPBASIS,%CMOVE,%VPTP,%P 1:PTP, 2:HOME, 3:, 5:100, 7:DEFAULT
+		$BWDSTART = FALSE
+		PDAT_ACT=PDEFAULT
+		FDAT_ACT=FHOME
+		BAS (#PTP_PARAMS,100 )
+		$H_POS=XHOME
+		PTP  XHOME
+	;ENDFOLD
+	
+	;FOLD PTP HOME  Vel= 100 % DEFAULT;%{PE}%MKUKATPBASIS,%CMOVE,%VPTP,%P 1:PTP, 2:HOME, 3:, 5:100, 7:DEFAULT
+		$BWDSTART = FALSE
+		PDAT_ACT=PDEFAULT
+		FDAT_ACT=FHOME
+		BAS (#PTP_PARAMS,100 )
+		$H_POS=XHOME
+		PTP  XHOME
+	;ENDFOLD
+	
+END
+]]></File>
+  </Template>
+</Templates>
