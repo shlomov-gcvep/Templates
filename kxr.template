@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Templates>
+  <Template DisplayName="kxr" Description="kxr dat file">
+    <File Name="$Name$" Extension=".ru.kxr"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<resources xml:lang="ru" xmlns="http://www.kuka.com/schemas/kxr/2009">
+  <module name="$Name$">
+
+    <uiText key="key1">
+      <text>Ключ 1</text>
+    </uiText>
+
+    <uiText key="key2">
+      <text>Ключ 2</text>
+    </uiText>
+
+  </module>
+</resources>
+]]></File>
+  </Template>
+</Templates>
