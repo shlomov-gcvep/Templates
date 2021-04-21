@@ -21,7 +21,8 @@ EXT  BAS (BAS_COMMAND  :IN,REAL  :IN )
 
 
 ;ROBOT variable
-
+DECL BASIS_SUGG_T LAST_BASIS={POINT1[] "P2                      ",POINT2[] "P2                      ",CP_PARAMS[] "CPDAT2                  ",PTP_PARAMS[] "PDAT0                   ",CONT[] "C_DIS C_DIS             ",CP_VEL[] "0.2                     ",PTP_VEL[] "100                     ",SYNC_PARAMS[] "SYNCDAT                 ",SPL_NAME[] "S0                      ",A_PARAMS[] "ADAT0                   "}
+DECL MODULEPARAM_T LAST_TP_PARAMS={PARAMS[] "Kuka.PointName=e6p_P1; Kuka.FrameData.base_no=0; Kuka.FrameData.tool_no=1; Kuka.FrameData.ipo_frame=#BASE; Kuka.FrameData.point2=; Kuka.isglobalpoint=False; Kuka.MoveDataPtpName=D_P1; Kuka.MovementDataPdat.apo_mode=#CDIS; Kuka.MovementDataPdat.apo_dist=100; Kuka.MovementData.vel=2; Kuka.MovementData.acc=100; Kuka.MovementData.exax_ign=0; Kuka.VelocityPtp=100; Kuka.BlendingEnabled=True; Kuka.CurrentCDSetIndex=0; Kuka.MoveDataName=D_P1; Kuka.MovementData.apo_fac=100; Kuka.MovementData.apo_dist=500; Kuka.MovementData.axis_acc=100; Kuka.MovementData.axis_vel=100; Kuka.MovementData.circ_typ=#BASE; Kuka.MovementData.jerk_fac=50; Kuka.MovementData.ori_typ=#VAR; Kuka.VelocityPath=2.0                                     "}
 ENDDAT
 ]]></File>
     <File Name="$Name$" Extension=".src"><![CDATA[&ACCESS RV
@@ -47,7 +48,7 @@ DEF  $Name$ ( )
 			;*   Version       : 0.0                           *
 			;*   Сlient        : OOO"______"                   *
 			;*   Сreator       : ___________________           *
-			;*   Date          : xx.xx.202x                    *
+			;*   Date          : xx.xx.2021                    *
 			;*   Born in Samara                                *
 			;***************************************************
 		;ENDFOLD (TITLE)

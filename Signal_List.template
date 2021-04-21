@@ -53,6 +53,7 @@
 ;Programs for the submitter - " sub_"
 ;Programs for displaying information on the smartpad - " hmi_"
 ;Programs for working with Ethernet KRL - " eki_"
+;Programs for setting touch-up orientations in points, etc. "tu_"
 
 ;Global variables - " g_"
 ;Variable DatFail - " d_"
